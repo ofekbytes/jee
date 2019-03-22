@@ -1,0 +1,12 @@
+
+JEE
+.youtube.
+..code
+   https://www.youtube.com/watch?v=0dW577tJXkk
+
+..JEE.installs
+   https://www.youtube.com/watch?v=wDS4QgehTSI
+
+.examples.
+..code
+   http://www.newthinktank.com/2019/03/java-ee-tutorial/
