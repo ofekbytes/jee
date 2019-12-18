@@ -1,0 +1,91 @@
+
+
+jee tree example:
+.
+├── j2eeex1
+│   └── JEEEx1
+│       ├── build
+│       │   └── classes
+│       ├── src
+│       └── WebContent
+│           ├── META-INF
+│           │   └── MANIFEST.MF
+│           └── WEB-INF
+│               └── lib
+└── jeex
+
+
+jee code example:
+
+folder: 
+WEB-INF
+
+path: 
+/home/yaron/workspace-j2ee/j2eeex1/JEEEx1/WebContent/WEB-INF
+
+purpose: 
+storing files that you don't want to be accessible on the web.
+example: Data Files, Web xml files, java classes ,java servlet, 
+
+
+
+- new jee project
+-- add tomcat 9
+-- add servlet (right click --> "new" --> "servlet")
+
+-- servlet - 
+servlet provide access to DataBases and run on the server side
+process data for dynamic web pages
+
+-- jee tree: after adding servlet (JeeServlet.java):
+
+.
+├── j2eeex1
+│   └── JEEEx1
+│       ├── build
+│       │   └── classes
+│       │       └── com
+│       │           └── myserver
+│       │               └── JeeServlet.class
+│       ├── src
+│       │   └── com
+│       │       └── myserver
+│       │           └── JeeServlet.java
+│       └── WebContent
+│           ├── META-INF
+│           │   └── MANIFEST.MF
+│           └── WEB-INF
+│               └── lib
+└── jeex
+
+
+-- JSP apps use MVC pattern - 
+--- Model - java code (access and process the data)
+--- View - the interface the user sees 
+--- Controller - communicator between Model and View.
+
+
+-- add import to the servlet (JeeServlet.java) that can "print", "write" 
+   and allow us to send "html" and "xml" to the client.
+
+   import java.io.PrintWriter;
+
+
+-- 
+
+
+
+
+
+delete when done learnning
+jee example link:
+https://www.youtube.com/watch?v=0dW577tJXkk&t=29s
+
+
+
+
+
+
+
+
+

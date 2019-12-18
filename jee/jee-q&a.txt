@@ -1,0 +1,8 @@
+
+Is JEE and j2ee the same?
+The platform was known as Java 2 Platform, 
+Enterprise Edition or J2EE from version 1.2, 
+until the name was changed to Java Platform, 
+Enterprise Edition or Java EE in version 1.5. 
+The current version is called Jakarta EE 8. 
+Java EE was maintained by Oracle under the Java Community Process.

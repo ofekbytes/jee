@@ -10,3 +10,26 @@ JEE
 .examples.
 ..code
    http://www.newthinktank.com/2019/03/java-ee-tutorial/
+
+
+   wikipeida
+
+   https://en.wikipedia.org/wiki/Java_Platform,_Enterprise_Edition
+
+   https://en.wikipedia.org/wiki/Java_EE_application
+
+   https://en.wikipedia.org/wiki/J2EE_Management
+
+   https://www.oracle.com/java/technologies/java-ee-glance.html
+
+
+
+youtube:
+
+https://www.youtube.com/watch?v=0dW577tJXkk&t=29s
+
+
+books download - free :-)
+Murach's Java Servlets and JSP, 3rd Edition (Murach: Training & Reference) 3rd Edition
+
+
