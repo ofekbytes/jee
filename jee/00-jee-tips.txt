@@ -128,17 +128,39 @@ $ show tables;
 1 row in set (0.00 sec)
 
 
+#
+## Create User 'turtledove' ##
+#
+CREATE USER 'dbadmin'@'localhost' IDENTIFIED BY 'turtledove';
+
 
 #
 ## Change/Update root password in mysql console ##
 #
 $ UPDATE mysql.user SET Password=PASSWORD('NEWPW') WHERE User='root';
 
-delete when done learnning
-jee example link:
-https://www.youtube.com/watch?v=0dW577tJXkk&t=29s
+
+#
+## show user information ##
+#
+$ select * from mysql.user where user='dbadmin';
 
 
+#
+## show user "dbadmin" information ##
+#
+$ select User, Select_priv, Insert_priv, Update_priv, Delete_priv from mysql.user where user='dbadmin';
++---------+-------------+-------------+-------------+-------------+
+| User    | Select_priv | Insert_priv | Update_priv | Delete_priv |
++---------+-------------+-------------+-------------+-------------+
+| dbadmin | N           | N           | N           | N           |
++---------+-------------+-------------+-------------+-------------+
+1 row in set (0.00 sec)
 
+
+#
+## grant permission to the user information ##
+#
+GRANT ALL PRIVILEGES ON test1.customer TO * 'dbadmin'@'localhost' IDENTIFIED BY 'turtledove';
 
 
