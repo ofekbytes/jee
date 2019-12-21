@@ -129,9 +129,24 @@ $ show tables;
 
 
 #
-## Create User 'turtledove' ##
+## show DataBase Table columns/fields ##
 #
-CREATE USER 'dbadmin'@'localhost' IDENTIFIED BY 'turtledove';
+$ show columns from test1.customer;
++------------+------------------+------+-----+---------+----------------+
+| Field      | Type             | Null | Key | Default | Extra          |
++------------+------------------+------+-----+---------+----------------+
+| first_name | varchar(30)      | NO   |     | NULL    |                |
+| last_name  | varchar(30)      | NO   |     | NULL    |                |
+| phone      | varchar(20)      | NO   |     | NULL    |                |
+| cust_id    | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
++------------+------------------+------+-----+---------+----------------+
+
+
+
+#
+## Create User and password ##
+#
+CREATE USER 'new-user-name'@'localhost' IDENTIFIED BY 'password';
 
 
 #
@@ -141,9 +156,15 @@ $ UPDATE mysql.user SET Password=PASSWORD('NEWPW') WHERE User='root';
 
 
 #
+## Change/Update "user-name-jron" password in mysql console ##
+#
+$ UPDATE mysql.user SET Password=PASSWORD('NEWPassWord') WHERE User='jron';
+
+
+#
 ## show user information ##
 #
-$ select * from mysql.user where user='dbadmin';
+$ select * from mysql.user where user='user-name';
 
 
 #
@@ -161,6 +182,26 @@ $ select User, Select_priv, Insert_priv, Update_priv, Delete_priv from mysql.use
 #
 ## grant permission to the user information ##
 #
-GRANT ALL PRIVILEGES ON test1.customer TO * 'dbadmin'@'localhost' IDENTIFIED BY 'turtledove';
+$ GRANT ALL PRIVILEGES ON test1.customer TO 'user-name'@'localhost' IDENTIFIED BY 'new-password';
+
+## dbadmin
+$ GRANT ALL PRIVILEGES ON test1.customer TO 'dbadmin'@'localhost' IDENTIFIED BY '2Wsxcde3';
+
+
+#
+## revoke permission to the user and drop (remove) the user ##
+#
+$ REVOKE ALL PRIVILEGES, GRANT OPTION FROM 'yron'@'localhost';
+Query OK, 0 rows affected (0.00 sec)
+
+$ DROP USER 'yron'@'localhost';
+Query OK, 0 rows affected (0.00 sec)
+
+
+
+
+## insert ##
+INSERT INTO CUSTOMER (first_name, last_name, phone, cust_id) VALUES ('shalom', 'lizrovitch', '03-689-1111', NULL)
+
 
 

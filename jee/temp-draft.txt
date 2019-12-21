@@ -1,0 +1,7 @@
+
+
+
+ ${cust.lName}<br>
+
+
+ request.setAttribute("cust", cust);
