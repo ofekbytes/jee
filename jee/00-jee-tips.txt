@@ -205,3 +205,53 @@ INSERT INTO CUSTOMER (first_name, last_name, phone, cust_id) VALUES ('shalom', '
 
 
 
+select * from customer;
++------------+-------------+-------------+---------+
+| first_name | last_name   | phone       | cust_id |
++------------+-------------+-------------+---------+
+| shalom     | lizrovitch  | 03-689-1111 |       1 |
+| sh         | it          | 393         |       2 |
+| t1         | t1          | 03-689-1111 |       3 |
+| t1         | t1          | 03-689-1111 |       4 |
+| t1         | t1          | 03-689-1111 |       5 |
+| shalom     | lee         | 433487      |       6 |
+| shalom     | lizerovitch | 03-689-5421 |       7 |
+| shalom     | lizerovitch | 03-689-5421 |       8 |
+| shalom     | lizerovitch | 03-689-5421 |       9 |
+| shalom     | lee         | 433487      |      10 |
+| noam       | kessler     | 03-1111-222 |      11 |
++------------+-------------+-------------+---------+
+11 rows in set (0.00 sec)
+
+$ DELETE FROM test1.customer where cust_id=11;
+Query OK, 1 row affected (0.06 sec)
+
+$ select * from customer;
++------------+-------------+-------------+---------+
+| first_name | last_name   | phone       | cust_id |
++------------+-------------+-------------+---------+
+| shalom     | lizrovitch  | 03-689-1111 |       1 |
+| sh         | it          | 393         |       2 |
+| t1         | t1          | 03-689-1111 |       3 |
+| t1         | t1          | 03-689-1111 |       4 |
+| t1         | t1          | 03-689-1111 |       5 |
+| shalom     | lee         | 433487      |       6 |
+| shalom     | lizerovitch | 03-689-5421 |       7 |
+| shalom     | lizerovitch | 03-689-5421 |       8 |
+| shalom     | lizerovitch | 03-689-5421 |       9 |
+| shalom     | lee         | 433487      |      10 |
++------------+-------------+-------------+---------+
+10 rows in set (0.00 sec)
+
+
+$ DELETE FROM test1.customer where cust_id>1 and cust_id <=10;
+Query OK, 9 rows affected (0.03 sec)
+
+$ select * from customer;
++------------+------------+-------------+---------+
+| first_name | last_name  | phone       | cust_id |
++------------+------------+-------------+---------+
+| shalom     | lizrovitch | 03-689-1111 |       1 |
++------------+------------+-------------+---------+
+1 row in set (0.00 sec)
+
